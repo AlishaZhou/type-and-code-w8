@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id='rhino'>heloooooo</div>
+
+    <button id='gabriel'>CLICK ME</button>
+
+    <button id='baseball'>beep</button>
+
+    <script>
+        function big() {
+            rhino.textContent = 'gaga';
+
+            //generate a number from 0-100
+            rhino.style.fontSize = Math.random() * 100 + 'px';
+            rhino.classList.toggle('broccoli');
+        }
+        gabriel.addEventListener('click', big)
+
+        // setInterval(big, 100)
+
+        function pikmin() {
+            let x = document.getElementById("baseball");
+            //var.innerHTML = HTML content of an element with Id var
+            if (x.innerHTML == 'beep') {
+                x.innerHTML = 'boop';
+                rhino.style.visibility = 'hidden';
+                baseball.style.color = 'rebeccaPurple';
+            } else {
+                x.innerHTML = 'beep';
+                rhino.style.visibility = 'visible';
+                baseball.style.color = 'blue';
+            }
+        }
+
+        baseball.addEventListener('click', pikmin)
+
+    </script>
+</body>
+
+</html>
